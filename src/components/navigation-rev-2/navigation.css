@@ -1,0 +1,164 @@
+header {
+  width: 100vw;
+  background-color: var(--dark);
+  height: 5rem;
+  padding: 2rem 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header .logo img {
+  width: 2rem;
+}
+
+header .logo h1 {
+  color: var(--reddish); 
+}
+
+/* ************* Navbar ******************* */
+
+header .navbar .arrow { 
+  margin-bottom: -3px;
+}
+
+header .toggle-switch {
+    font-size: 1.3rem;  
+    color: var(--white);
+   margin-top: 5px;
+}
+
+header .toggle-switch-back {
+  height: 2.2rem;
+  width: 2.2rem;
+  text-align: center;
+ border: solid 1px var(--white); 
+ border-radius: 5px;  
+  background: blue;
+}
+
+header .navbar ul {
+  list-style: none;
+}
+
+header .navbar ul li {
+  position: relative;
+  float: left; 
+}
+
+header .navbar ul li a {
+  font-size: 1rem;
+  padding: 15px;
+  color: var(--white);
+  display: block;
+  text-decoration: none; 
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover { 
+  color: var(--reddish);
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
+
+header .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 160px;
+  background: var(--less-dark);
+  text-align: left;
+  display: none;  
+}
+
+header .navbar ul li ul li {
+  width: 100%;
+  border-top: 1px solid var(--gray-tone);
+  margin-left: -30px; 
+}
+
+header .navbar ul li:hover > ul {  
+  display: initial; 
+}
+
+#menu-bar {
+  display: none;
+}
+
+header label { 
+  cursor: pointer;
+  display: none;
+}
+
+/* **************** Responsive ************** */
+
+@media screen and (max-width: 992px) {
+  header {
+    padding: 2rem 3rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  header {
+    padding: 1.5rem 3rem 1.5rem 3rem;
+  }
+
+  header label {
+    display: initial;
+    color: var(--white);
+  }
+
+  header .navbar {   
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    padding-bottom: 2rem;   
+    width: 230px;   
+    background: blue;
+    border-bottom-right-radius: 30px;  
+    display: none;
+  }
+
+  header .navbar ul li {
+    width: 100%;
+  }
+
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%; 
+    background: transparent;   
+  }
+
+  header .navbar ul li:focus-within > ul {
+    display: initial;
+  }
+
+  header .navbar ul li ul li {
+    margin-left: 0;
+  }
+
+  #menu-bar:checked ~ .navbar {
+    display: initial;
+  }
+}
+
+
+@media screen and (max-width: 576px) {    
+    header .navbar {
+      width: 220px;
+    }   
+  }
+  
+
+@media screen and (max-width: 450px) {    
+  header .navbar {
+    width: 200px;
+  }   
+}

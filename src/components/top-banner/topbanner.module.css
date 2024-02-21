@@ -1,0 +1,41 @@
+.container {
+    width: 100vw;  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.leftBox {
+    background-color: var(--reddish); 
+    height: 33vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.textBox {  
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+}
+
+.textBox h1 {
+    font-size: 3.5rem;
+    margin-bottom: -5px;
+}
+
+.rightBox {   
+    height: 33vh;
+}
+
+.rightBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;       
+    }
+}

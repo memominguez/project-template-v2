@@ -1,0 +1,179 @@
+.container {
+  width: 85vw;
+  margin: auto;
+  min-height: 400px;
+  margin-top: 2rem;
+}
+
+.overTitle {
+  margin-bottom: -2rem;
+}
+
+.overTitle p {
+  color: var(--reddish);
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title h1 {
+  font-size: 3.3rem;
+  animation: animation2 3s ease-out;
+}
+
+.titleRight {
+  display: flex;
+  align-items: center;
+}
+
+.titleRight p {
+  font-size: 1rem; 
+  margin-left: -2rem;
+}
+
+.titleIcon {
+  font-size: 3.3rem;
+  color: var(--gray-tone);
+  transition: all 0.3s linear;
+}
+
+.titleRight:hover .titleIcon {
+  color: var(--reddish);
+}
+
+.gridContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.cell {
+  height: fit-content;
+}
+
+.cellTop {
+  height: 65%;
+}
+
+.cellTop img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cellBottom {
+  margin-top: -4px; /* Small overlap */
+  background-color: var(--reddish);
+  padding: 1px 1rem 1rem 1rem;
+  text-align: center;
+}
+
+.cellBottom h2 {
+  font-size: 1.2rem;
+}
+
+.cellBottom p {
+  margin-top: -10px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.icon {
+  font-size: 1.7rem;
+  color: var(--dark-gray);
+  margin: 0 0.6rem;
+  z-index: 10;
+}
+
+.iconBack {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-left: -2.2rem;
+}
+
+/* ************** Animations ************** */
+.animationType1 {
+  animation: animation1 3s ease-out;
+}
+
+@keyframes animation1 {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animationType2 {
+  animation: animation1 3s ease-out;
+}
+
+@keyframes animation2 {
+  from {
+    transform: translateY(180px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animationType3 {
+  animation: animation3 3s ease-out;
+}
+
+@keyframes animation3 {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ************** Responsive ************* */
+
+@media only screen and (max-width: 992px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title h1 {
+    font-size: 3rem;
+  }
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+  
+.cellBottom h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .title {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,31 @@
+.container {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+
+.text1 {
+  background: radial-gradient(
+    circle,
+    rgba(204, 204, 204, 1) 0%,
+    rgba(233, 236, 237, 1) 0%,
+    rgba(118, 119, 120, 0.9220938375350141) 74%,
+    rgba(100, 100, 100, 0.9669117647058824) 100%
+  );
+
+  font-size: 5rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  word-wrap: normal;
+}
+
+.text2 {
+    color: transparent;
+    font-size: 5rem;
+    -webkit-text-stroke: 1px var(--white);
+}

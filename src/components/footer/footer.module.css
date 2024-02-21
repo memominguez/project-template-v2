@@ -1,0 +1,174 @@
+.container {
+  width: 100vw; 
+  margin-top: 2px; 
+  display: flex;
+}
+
+.leftbox {
+  background-color: var(--reddish);
+  width: 33%;
+  height: 320px;
+  padding-left: 4rem;
+  padding-top: 1rem;  
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoContainer img {
+  height: 3rem;
+}
+
+.logoContainer h1 {
+  color: var(--dark-red);
+  font-weight: 700;
+}
+
+.copyright {
+  margin-bottom: 3rem;
+}
+
+.copyright p {
+  line-height: 0.5;
+  font-size: 0.8rem;
+}
+
+.leftIcons {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.iconBox {
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: var(--white);
+}
+
+.leftIcons .icons {
+  color: var(--dark);
+  font-size: 1.7rem;
+  margin-left: -2.5px;
+  margin-top: -2px;
+}
+
+/* Right Box */
+.rightbox {
+  width: 67%;
+  height: 320px;
+  background-color: var(--less-dark);
+  /* padding: 1rem;  */
+  display: flex;
+  /* gap: 1rem; */
+}
+
+/* Left Column */
+.rightbox .leftColumn {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.rightbox .leftColumn h3 {
+  margin-left: 1.5rem;
+}
+
+.rightbox .leftColumn ul li {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.rightbox .leftColumn ul li a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.rightbox .leftColumn ul li::marker {
+  color: var(--reddish);
+  font-size: 1rem;
+}
+
+.rightbox .leftColumn ul li a:hover {
+  color: var(--reddish);
+}
+
+/* Center Column*/
+.rightbox .centerColumn {
+  flex-grow: 1.5;
+  padding: 1rem;
+}
+
+.rightbox .centerColumn h3 {
+  margin-left: 1.5rem;
+}
+
+.rightbox .centerColumn ul li {
+  font-size: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.rightbox .centerColumn ul li::marker {
+  color: var(--reddish);
+  font-size: 1rem;
+}
+
+/* Right Column*/
+.rightbox .rightColumn {
+  flex-grow: 3;
+  padding: 1rem;
+}
+
+.rightbox .infoIcons {
+  margin-right: 0.7rem;
+  color: var(--reddish);
+}
+
+.rightbox span {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 992px) {
+  .leftbox {
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .leftbox {
+    width: 100vw;
+    height: fit-content;
+    padding-left: 0;
+    padding-bottom: 30px;
+    align-items: center;
+  }
+  .logoContainer {
+    justify-content: center;
+  }
+  .rightbox {
+    width: 100vw;
+    height: fit-content;
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  .rightbox .leftColumn {
+    margin: auto;
+  }
+
+  .rightbox .centerColumn {
+    flex-grow: 1;
+    margin: auto;
+  }
+  .rightbox .rightColumn {
+    flex-grow: 1;
+    margin: auto;
+  }
+}

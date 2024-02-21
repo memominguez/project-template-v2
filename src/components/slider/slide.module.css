@@ -1,0 +1,152 @@
+.outercontainer {
+  width: 96vw; 
+  height: 320px;
+  margin: auto; 
+  overflow: hidden;
+}
+
+.spaceholder {
+  background-color: var(--gray-tone);
+  height: 320px;
+  width: 3px;
+}
+
+.container {
+    width: 88%;
+    margin: auto; 
+    display: flex;
+    flex-direction: row;    
+  }  
+  
+  .container.active { 
+    animation: slidebox 1s ease-out; 
+  }
+  
+  .left {
+    width: 15%;
+    height: 300px; 
+    padding-top: 2rem;  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;    
+  }
+
+  .quoteIcon {
+    color: var(--reddish);
+    font-size: 4rem;  
+  }
+  
+  .right {
+    width: 85%;  
+    padding: 2rem 2rem 2rem 0;    
+  }
+  
+  .citation {
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  
+  .person {
+    display: flex;
+    align-items: center;
+  }
+  
+  .person img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .personData {
+    display: flex;
+    flex-direction: column;   
+  }
+  
+  .personData h3 {
+    margin-bottom: 0;
+  }
+  
+  .personData p {
+    margin-top: 0;
+  }
+  
+  /* ************** Animation ******************* */
+  @keyframes slidebox {
+    from {
+      transform: translateX(500px)
+    } to {
+      transform: translateX(0)
+    }
+  }
+
+  /* *************** Responsive ***************** */
+  
+  @media screen and (max-width: 768px) {
+    .outercontainer {
+      height: 420px;
+    }  
+    .spaceholder {
+      height: 420px;
+    }
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 2rem;       
+    }
+    .left {
+        width: 30%;
+        height: 100px;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-top: 0;       
+    }
+    .right {
+      padding: 0 2rem 3rem 0;    
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .outercontainer {
+      height: 500px;
+    }  
+    .spaceholder {
+      height: 500px;
+    }
+    .right {
+      padding: 2rem 0 2rem 0;
+    }
+  }
+  
+  @media screen and (max-width: 510px) {
+    .outercontainer {
+      height: 530px;
+    }    
+    .spaceholder {
+      height: 530px;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .outercontainer {
+      height: 560px;
+    }    
+    .spaceholder {
+      height: 560px;
+    }
+  }
+
+  
+  @media screen and (max-width: 380px) {
+    .outercontainer {
+      height: 590px;
+    }
+   
+    .spaceholder {
+      height: 600px;
+    }
+  }
+  

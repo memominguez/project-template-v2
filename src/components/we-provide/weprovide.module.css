@@ -1,0 +1,250 @@
+.container {
+  width: 100vw;
+  min-height: 600px;
+  background-color: var(--less-dark);
+  padding-top: 2rem;
+}
+
+/* ************* Header **************** */
+.header {
+  /* width: 100%; */
+  min-height: 180px;
+  display: flex;
+}
+
+.headerLeft {
+  width: 60%;
+  padding: 1rem 1rem 0 7rem;
+}
+
+.headerLeft p {
+  color: var(--reddish);
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+}
+
+.headerLeft h1 {
+  font-size: 3.2rem;
+  animation: animation1 3s ease-out;
+}
+
+@keyframes animation1 {
+  from {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.headerRight {
+  width: 40%;
+}
+
+.headerRight p {
+  visibility: hidden;
+}
+
+.content { 
+  display: flex;
+}
+
+/* ************* Content Left **************** */
+.contentLeft {
+  width: 50%;
+  min-height: 560px;
+  padding: 0 1rem 2rem 7rem;
+}
+
+.contentLeft img {
+  width: 100%;
+  object-fit: cover;
+  animation: animation2 3s ease-out;
+}
+
+@keyframes animation2 {
+  from {
+    transform: translateX(-400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ************** Content Right **************** */
+.contentRight {
+  width: 50%;
+  min-height: 560px;
+  padding: 0 7rem 2rem 3rem;
+}
+
+.contentRight p {
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.contentRight .foot {
+  width: 50%;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 99;
+}
+
+.contentRight .foot a {
+  /* margin-left: -2rem; */
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.contentRight .foot a p {
+  margin-left: -1.5rem;
+  font-weight: 400;
+}
+
+.contentRight .foot .square {
+  color: var(--gray-tone);
+  font-size: 3rem;
+  transition: all 0.3s;
+}
+
+.contentRight .foot:hover .square {
+  color: var(--reddish);
+}
+
+.banner1 {
+  position: absolute;
+  height: fit-content;
+  width: 35vw;
+  background-color: var(--reddish);
+  top: 80%;
+  left: -100%;
+  padding: 1rem;
+  border-radius: 7px;
+  z-index: -1;
+  animation: animation3 4s ease-out;
+  animation-delay: 1.5s;
+}
+
+@keyframes animation3 {
+  from {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.banner1 p {
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.banner2 {
+  height: fit-content;
+  width: 90%;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--reddish);
+  font-style: italic;
+  font-weight: 400;
+  padding: 1rem;
+  border-radius: 7px;
+  display: none;
+  animation: animation3 4s ease-out;
+  animation-delay: 1.5s;
+}
+
+@media only screen and (max-width: 992px) {
+  .content {
+    flex-direction: column;
+  }
+  .headerLeft {
+    width: 95%;
+    padding: 0 0 0 3rem;
+  }
+  .headerLeft h1 {
+    font-size: 2.7rem;
+  }
+  .headerRight {
+    width: 5%;
+  }
+  .contentLeft {
+    width: 100%;
+    padding: 0 3rem 0 3rem;
+  }
+  .contentRight {
+    width: 100%;
+    padding: 2rem 3rem 0 3rem;
+  }
+  .banner1 {
+    display: none;
+  }
+  .banner2 {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .headerLeft h1 {
+    font-size: 2.5rem;
+  }
+  .contentLeft {   
+    min-height: 400px;
+    max-height: 520px;
+  }
+  .contentRight {
+    padding-top: 0;   
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .contentLeft {
+    min-height: 300px;
+    max-height: 400px;
+  }
+
+  .contentRight p {
+    font-size: 0.9rem;
+  }
+  .contentRight .banner2 {
+    width: 100%;
+  }
+  .contentRight .foot {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .headerLeft {
+    padding-left: 15px;
+  }
+  .contentLeft {
+    min-height: 250px;
+    max-height: 320px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .contentRight {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .contentLeft {
+    min-height: 200px;
+    max-height: 280px;
+  }
+}

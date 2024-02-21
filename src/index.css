@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --reddish: rgb(177, 27, 39);
+  --dark-red: rgb(71, 0, 0);
+  --dark: rgb(14, 17, 32);
+  --less-dark: rgb(17, 21, 39);
+  --dark-gray: rgb(38,38,38);
+  --gray-tone: rgb(75, 75, 75);
+  --white: rgb(244, 244, 244);
+}
+
+body {
+  margin: 0;
+  background-color: var(--dark);
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;  
+}
+
+/* The style below ensures the footer is always at the bottom of page */
+/* <main> tag is set in Root Layout, as in Root.jsx*/
+main {
+  display: grid;
+  min-height: 70vh;
+  grid-template-rows: auto 1fr auto;
+}
+/* 
+h1 {
+  animation: none;
+} */
+
+/* ************* Testing section *************** */
+
+.dummySection1 {
+  width: 100vw;
+  height: 900px;
+  background-color: var(--gray-tone);
+  border-bottom: 1px solid yellow;
+}
+
+
+.dummySection2 {
+  width: 100vw;
+  height: 900px;
+  background-color: var(--gray-tone);
+  border-top: 1px solid yellow;
+}

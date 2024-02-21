@@ -1,0 +1,97 @@
+.progressbar {
+    width: 500px;
+    height: 12px;
+    border-radius: 2px;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #585858;
+  }
+  
+  .progressbarfill {
+    height: 100%;
+    border-radius: 5px;  
+    transition: width 0.3s ease-out; 
+  }
+
+  .progressBarLabel {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -10px; 
+    padding-right: 30px;  
+  }
+
+  .labelText {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .labelPct {
+   font-size: 1.2rem;
+   animation: moving 5s ease-in-out;
+  }
+
+  @keyframes moving {
+    from {
+      transform: translateX(-250px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+
+  @media only screen and (max-width: 768px) {
+    .progressbar {
+      width: 400px;
+    }
+    .progressBarLabel {
+      width: 400px
+    }
+    @keyframes moving {
+      from {
+        transform: translateX(-150px);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .progressbar {
+      width: 300px;
+    }
+    .progressBarLabel {
+      width: 300px
+    }
+    @keyframes moving {
+      from {
+        transform: translateX(-80px);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .progressbar {
+      width: 240px;
+    }
+    .progressBarLabel {
+      width: 240px
+    }
+    @keyframes moving {
+      from {
+        transform: translateX(-60px);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+  }
+  

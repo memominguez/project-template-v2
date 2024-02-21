@@ -1,0 +1,155 @@
+.container {
+  width: 100vw;
+  min-height: 300px;
+  margin-top: 2rem;
+  position: relative; 
+  height: calc(100vw * 0.5);   
+}
+
+.upperBox {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.imgContainer {
+  width: 80%;
+  height: 100%; 
+}
+
+.imgContainer img {
+  width: 100%;
+  object-fit: contain; 
+}
+
+.lowerBox {
+  width: 85%; 
+  height: fit-content;
+  position: absolute;
+  left: 0; 
+  top: calc(100vw * 0.3); 
+}
+
+.messageContainer { 
+  background-color: var(--reddish); 
+  animation: slide 3s ease-out;
+  position: relative; 
+}
+
+.lowerBox .gridContainer { 
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+}
+
+.messageLeft { 
+  padding: 0 0 0 2rem;
+}
+
+.messageLeft h1 {
+  font-size: 3.5rem;
+}
+
+.messageRight { 
+  padding: 1rem 1rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.messageRight .contactUs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.messageRight .smallSquare {
+  font-size: 3.5rem;
+  color: var(--gray-tone);
+}
+
+.messageRight > p {
+  line-height: 1.5;
+}
+
+.messageRight .contactUs p {
+  font-weight: 500;
+  letter-spacing: 1.7px;
+  margin-left: -2rem;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@media screen and (max-width: 1230px) {
+  .container {
+    height: calc(100vw * 0.6);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .messageLeft h1 {
+    font-size: 3rem;
+  }
+
+  .container {
+    height: calc(100vw * 0.7);
+  } 
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: calc(100vw * 0.95);
+  }
+ 
+  .imgContainer {
+    width: 90%;
+  }
+  .lowerBox .gridContainer {
+    grid-template-columns: 1fr;
+  }
+  .messageRight {   
+    padding: 1rem 2rem 2rem 2rem;
+  }
+  .messageLeft h1 {
+    font-size: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .messageLeft h1 {
+    font-size: 2.5rem;
+  }
+  .container {
+    height: calc(100vw * 1.0);
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .lowerBox { 
+    top: calc(100vw * 0.47);
+    width: 100%;
+  }
+  .container {
+    height: calc(100vw * 1.5);
+  }
+  .imgContainer {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 410px) {
+  .container {
+    height: calc(100vw * 1.8);
+  }
+}
